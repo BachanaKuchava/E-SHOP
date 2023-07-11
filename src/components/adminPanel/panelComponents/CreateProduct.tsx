@@ -1,0 +1,77 @@
+import axios from "axios";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+export function CreateProduct(props: any) {
+  const {t} = useTranslation()
+
+  const [title, setTile] = useState("");
+  const [desc, setDesc] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+
+  async function createProduct() {
+    try {
+      const resp = await axios.post(
+        `http://localhost:3001/products`,
+        {
+          title: title,
+          description: desc,
+          price: +price,
+          category: category,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("ACCESSTOKEN")}`,
+          },
+        }
+      );
+      if(resp) {
+        setTile('')
+        setDesc('')
+        setPrice('')
+        setCategory('')
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return (
+    <div className="w-full justify-between items-center dark:bg-neutral-800 flex gap-5 p-5 rounded-xl max-lg:flex-col">
+      <div className="w-2/4 flex flex-col gap-3 max-lg:w-full">
+        <div className="w-full">
+        <label htmlFor="default-input" 
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Title</label>
+        <input type="text"  value={title} onChange={(e) => setTile(e.target.value)} 
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        </div>
+        <div>
+        <label htmlFor="default-input" 
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Description</label>
+        <input type="text"  value={desc} onChange={(e) => setDesc(e.target.value)} 
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        </div>
+        <div>
+        <label htmlFor="default-input" 
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Price</label>
+        <input type="text"  value={price} onChange={(e) => setPrice(e.target.value)} 
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        </div>
+        <div>
+        <label htmlFor="default-input" 
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Category</label>
+        <input type="text"  value={category} onChange={(e) => setCategory(e.target.value)}
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        </div>
+      </div>
+      <button type="button" onClick={() => createProduct()} 
+      className="px-6 py-3.5 text-base font-medium text-white inline-flex items-center bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-lg">Create</button>
+
+    </div>
+  );
+}
+
+
+
+
+
+
