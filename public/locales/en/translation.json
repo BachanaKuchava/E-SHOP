@@ -1,0 +1,269 @@
+{
+    "Shop by Category": {
+        "1": "Shop by Category"
+    },
+    "Accessories": {
+        "1":"Accessories"
+    },
+    "Furniture": {
+        "1":"Furniture"
+    },
+    "Electronics": {
+        "1":"Electronics"
+    },
+    "Clothes": {
+        "1":"Clothes"
+    },
+    "Bags": {
+        "1":"Bags"
+    },
+    "Home appliances": {
+        "1":"Home appliances"
+    },
+    "Login": {
+        "1":"Login"
+    },
+    
+    "Sign Up": {
+        "1":"Sign Up"
+    },
+    "Profile": {
+        "1":"Profile"
+    },
+    "Others": {
+        "1":"Others"
+    },
+
+    "Search your products here": {
+        "1": "Search your products here"
+    },
+
+    "Home": {
+        "1": "home"
+    },
+    "Shop": {
+        "1": "Shop"
+    },
+    "About": {
+        "1": "About"
+    },
+    "Contact": {
+        "1": "Contact"
+    },
+    "Journal": {
+        "1": "Journal"
+    },
+    "Buy Now": {
+        "1": "Buy Now"
+    },
+    "New Arrival": {
+        "1": "New Arrival"
+    },
+    "Two years warranty": {
+        "1": "Two years warranty"
+    },
+    "Free shipping": {
+        "1": "Free shipping"
+    },
+    "Return policy in 30 days": {
+        "1": "Return policy in 30 days"
+    },
+    "Our BestSaller": {
+        "1": "Our BestSaller"
+    },
+    "Special Offer": {
+        "1": "Special Offer"
+    },
+    "Product Of The Year": {
+        "1": "Product Of The Year"
+    },
+    "Product": {
+        "1": "Product"
+    },
+    "Price": {
+        "1": "Price"
+    },
+    "Quantity": {
+        "1": "quantity"
+    },
+    "Sub Total": {
+        "1": "Sub Total"
+    },
+    "Reset Cart": {
+        "1": "Reset Cart"
+    },
+    "Apply Coupon": {
+        "1": "Apply Coupon"
+    },
+    "Update Cart": {
+        "1": "Update Cart"
+    },
+    "Cart Total": {
+        "1": "Cart Total"
+    },
+    "Shipping Charge": {
+        "1": "Shipping Charge"
+    },
+    "Total": {
+        "1": "Total"
+    },
+    "Proceed To Checkout": {
+        "1":"Proceed To Checkout"
+    }, 
+    "Your Cart Feels Lonely :)": {
+        "1": "Your Cart Feels Lonely :)"
+    },
+    "Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy":{
+        "1": "Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy"
+    },
+    "Continue Shopping": {
+        "1": "Continue Shopping"
+    },
+    "Your Account": {
+        "1":"Your Account"
+    },
+    "Orders": {
+        "1": "Orders"
+    },
+    "Addresses": {
+        "1": "Addresses"
+    },
+    "Account Details": {
+        "1": "Account Details"
+    },
+    "Payment Options": {
+        "1": "Payment Options"
+    },
+    "More about E-Shop": {
+        "1": "More about E-Shop"
+    },
+    "The e-shop was created in 2020 and has completed 30,000 orders to date Also, we can deliver your order anywhere in the world": {
+        "1": "The e-shop was created in 2020 and has completed 30,000 orders to date.Also, we can deliver your order anywhere in the world"
+    },
+    "Show": {
+        "1": "Show"
+    },
+    "Shop by Brand": {
+        "1": "Shop by Brand"
+    },
+    "Shop by Price": {
+        "1": "Shop by Price"
+    },
+    "Products from": {
+        "1": "Products from"
+    },
+    "to": {
+        "1": "to"
+    },
+    "of": {
+        "1": "of"
+    },
+    "Categories": {
+        "1": "Categories"
+    },
+    "Add to Cart" : {
+        "1": "Add to Cart"
+    },
+    "Be the first to leave a review": {
+        "1": "Be the first to leave a review"
+    },
+    "Similar Products": {
+        "1": "Similar Products"
+    },
+    "Last year this product was sold 567 times and was sent to 43 countries without returns": {
+        "1": "Last year this product was sold 567 times and was sent to 43 countries without returns"
+    },
+    "Compare": {
+        "1": "Compare"
+    },
+    "View Details": {
+        "1": "View Details"
+    },
+    "Add to Wish List": {
+        "1": "Add to Wish List"
+    },
+    "New": {
+        "1": "New"
+    },
+    "Logout": {
+        "1": "Logout"
+    },
+    "Panel": {
+        "1": "Panel"
+    }, 
+    "Sign in to your account": {
+        "1": "Sign in to your account"
+    },
+    "Your email": {
+        "1": "Your email"
+    },
+    "Password": {
+        "1": "Password"
+    },
+    "Make new account": {
+        "1": "Make new account"
+    },
+    "Your User Name": {
+        "1": "Your User Name"
+    },
+    "Don’t have an account yet?": {
+        "1": "Don’t have an account yet?"
+    },
+    "Sign up": {
+        "1": "Sign up"
+    },
+    "Card Number" : {
+        "1": "Card Number"
+    },
+    "Expair Date" : {
+        "1" : "Expair Date"
+    },
+    "Card Holder": {
+        "1": "Card Holder"
+    },
+    "Full Name": {
+        "1": "Full Name"
+    },
+    "Lastname": {
+        "1": "Lastname"
+    },
+    "Phone": {
+        "1": "Phone"
+    },
+    "Address": {
+        "1": "Address"
+    },
+    "Pay" : {
+        "1" : "Pay"
+    },
+    "Messages": {
+        "1": "Messages"
+    },
+    "Fill up a Form": {
+        "1": "Fill up a Form"
+    },
+    "Post": {
+        "1": "Post"
+    },
+    "Enter your name here": {
+        "1": "Enter your name here"
+    },
+    "Enter your email here": {
+        "1": "Enter your email here"
+    },
+    "Enter your messages here": {
+        "1": "Enter your messages here"
+    },
+    "Offer" : {
+        "1": "Offer"
+    }
+
+
+    
+
+    
+    
+
+
+    
+}
