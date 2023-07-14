@@ -1,62 +1,33 @@
-import React from "react";
-import NavTitle from "./NavTitle";
-import { useTranslation } from 'react-i18next';
-import i18n from "../../../../i18next";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-const Price = () => {
-  const priceList = [
-    {
-      _id: 950,
-      priceOne: 0.0,
-      priceTwo: 49.99,
-    },
-    {
-      _id: 951,
-      priceOne: 50.0,
-      priceTwo: 99.99,
-    },
-    {
-      _id: 952,
-      priceOne: 100.0,
-      priceTwo: 199.99,
-    },
-    {
-      _id: 953,
-      priceOne: 200.0,
-      priceTwo: 399.99,
-    },
-    {
-      _id: 954,
-      priceOne: 400.0,
-      priceTwo: 599.99,
-    },
-    {
-      _id: 955,
-      priceOne: 600.0,
-      priceTwo: 1000.0,
-    },
-  ];
+export default function Price() {
   const { t } = useTranslation();
-  function handleClick(lang:any) {  
-    i18n.changeLanguage(lang);
+  const navigate = useNavigate()
+  const [filterFirstValue, SetfilterFirstValue] = useState("0");
+  const [filterSecondValue, SetfilterSecondValue] = useState("0");
+  function FilterByPrice(val1: string, val2: string) {
+   if(val1 !== val2 && val1 < val2) {
+    navigate(`/filter/${val1}/${val2}`);
+   }
   }
   return (
-    <div className="cursor-pointer">
-      <NavTitle title={t("Shop by Price.1")} icons={false} />
-      <div className="font-titleFont">
-        <ul className="flex flex-col gap-4 text-sm lg:text-base text-[#767676]">
-          {priceList.map((item) => (
-            <li
-              key={item._id}
-              className="border-b-[1px] border-b-[#F0F0F0] pb-2 flex items-center gap-2 hover:text-primeColor hover:border-gray-400 duration-300"
-            >
-              ${item.priceOne.toFixed(2)} - ${item.priceTwo.toFixed(2)}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
+<div>
+<input
+            onChange={(e) => SetfilterSecondValue(e.target.value)}
+            type="range"
+            id="price-range"
+            name="price-range"
+            min="0"
+            max="5000"
+            step="10"
+            className="accent-black"
+          />
+          <div className="w-[40px] ">{filterSecondValue}</div>
+          <button onClick={() => FilterByPrice(filterFirstValue, filterSecondValue)} className="text-white bg-black">Filter</button>
 
-export default Price;
+
+</div>
+  );
+}

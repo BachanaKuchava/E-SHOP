@@ -31,7 +31,7 @@ import { AuthContext } from "./auth/context/AuthContext";
 import { CurrentUserContext } from "./auth/provider/CurrentUserProvider/CurrentUserProvider";
 import Profile from "./pages/profile/Profile";
 import SearchView from "./components/searchView/SearchView";
-
+import FilteredView from "./pages/Filtered/FilteredView";
 
 const Layout = () => {
   return (
@@ -66,6 +66,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="*" element={<Home />} />
             <Route path="/searchView/:value" element={<SearchView />} />
+            <Route path="/filter/:value1/:value2" element={<FilteredView />} />
             {
               currentUser.user_role === "ADMIN" && (
                 <><Route path="/panel" element={<MainPanel />} /></>

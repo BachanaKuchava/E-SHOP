@@ -27,19 +27,19 @@ const ProductInfo: FC<ProductInfoProps> = ({ productInfo }) => {
       <p className="text-xl font-semibold">${productInfo.price}</p>
       <p className="text-base text-gray-600">{productInfo.des}</p>
       <p className="text-sm">{t("Be the first to leave a review.1")}.</p>
-      <p className="font-medium text-lg">
+      {/* <p className="font-medium text-lg">
         <span className="font-normal">Colors:</span> 
-      </p>
+      </p> */}
       <button
         
         className="w-full py-4 bg-primeColor hover:bg-black duration-300 text-white text-lg font-titleFont"
       >
         {t("Add to Cart.1")}
       </button>
-      <p className="font-normal text-sm">
+      {/* <p className="font-normal text-sm">
         <span className="text-base font-medium"> {t("Categories.1")}:</span> Spring
         collection, Streetwear, Women Tags: featured SKU: N/A
-      </p>
+      </p> */}
     </div>
   );
 };

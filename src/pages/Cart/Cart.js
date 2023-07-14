@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -9,9 +9,11 @@ import ItemCard from "./ItemCard";
 import { useTranslation } from 'react-i18next';
 import i18n from "../../i18next";
 import { useCart } from "react-use-cart";
+import { AuthContext } from "../../auth/context/AuthContext";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const { status } = useContext(AuthContext);
   const products = useSelector((state) => state.orebiReducer.products);
   const [totalAmt, setTotalAmt] = useState("");
   const [shippingCharge, setShippingCharge] = useState("");
@@ -112,11 +114,27 @@ const Cart = () => {
                 </p>
               </div>
               <div className="flex justify-end">
-                <Link to="/paymentgateway">
+
+                {
+                  status === 'authorized' ? (
+                    <Link to="/paymentgateway">
+                    <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
+                       {t("Proceed To Checkout.1")}
+                    </button>
+                  </Link>
+                  ) : (
+                    <Link to="/signin">
+                    <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
+                       {t("Proceed To Checkout.1")}
+                    </button>
+                  </Link>
+                  )
+                }
+                {/* <Link to="/paymentgateway">
                   <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
                      {t("Proceed To Checkout.1")}
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

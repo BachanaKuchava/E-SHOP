@@ -6,19 +6,16 @@ import ProductsOnSale from "../../components/pageProps/productDetails/ProductsOn
 import axios from "axios";
 
 interface Product {
-  productName: string;
+  title: string;
   price: number;
-  des: string;
-  color: string;
-  id: string;
-  img: string;
-  badge: boolean;
+  description: string;
+  category: string;
 }
 
 const ProductDetails = () => {
   const location = useLocation();
   const [prevLocation, setPrevLocation] = useState("");
-  const [productInfo, setProductInfo] = useState({});
+  const [productInfo, setProductInfo] = useState<Product>();
 console.log(productInfo);
 
   // useEffect(() => {
@@ -45,7 +42,7 @@ console.log(productInfo);
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full -mt-5 xl:-mt-8 pb-10 bg-gray-100 p-4">
           <div className="h-full">
-            <ProductsOnSale />
+            <ProductsOnSale category={productInfo?.category} />
           </div>
           <div className="h-full xl:col-span-2">
             {productInfo && (
@@ -62,9 +59,9 @@ console.log(productInfo);
           <div className="h-full w-full md:col-span-2 xl:col-span-3 xl:p-14 flex flex-col gap-6 justify-center">
             {/* {productInfo && <productInfo productInfo={productInfo} />} */}
             <ProductInfo productInfo={{
-              title: 'samsung',
-              price: 11,
-              des: 'loremasdfafssafasfasfafafafasfasfasfasfasf'
+              title: productInfo?.title,
+              price: productInfo?.price,
+              des: productInfo?.description
             }} />
           </div>
         </div>
