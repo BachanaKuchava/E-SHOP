@@ -130,11 +130,6 @@ const Cart = () => {
                   </Link>
                   )
                 }
-                {/* <Link to="/paymentgateway">
-                  <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
-                     {t("Proceed To Checkout.1")}
-                  </button>
-                </Link> */}
               </div>
             </div>
           </div>

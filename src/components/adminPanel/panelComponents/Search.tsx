@@ -37,7 +37,6 @@ function Search(props: Props) {
       
     return (
         <>
-        {/* <input type='search' value={searchValue} onChange={(e) => setSearchValue(e.target.value) }/> */}
         
         <div className="relative w-full lg:w-[600px] h-[50px] text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl my-[100px]">
         <input type='search' value={searchValue} onChange={(e) => setSearchValue(e.target.value) }
@@ -59,7 +58,6 @@ function Search(props: Props) {
                         <p className="font-semibold text-lg">
                           {item.title}
                         </p>
-                        {/* <p className="text-xs">{item.des}</p> */}
                         <p className="text-sm">
                           ID:{" "}
                           <span className="text-primeColor font-semibold">

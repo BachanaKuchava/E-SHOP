@@ -8,9 +8,6 @@ import i18n from "../../i18next";
 const Contact: React.FC = () => {
   const location = useLocation();
   const [prevLocation, setPrevLocation] = useState("");
-  // useEffect(() => {
-  //   setPrevLocation(location.state.data);
-  // }, [location]);
   const { t } = useTranslation();
   function handleClick(lang:any) {  
     i18n.changeLanguage(lang);
@@ -20,11 +17,9 @@ const Contact: React.FC = () => {
   const [email, setEmail] = useState("");
   const [messages, setMessages] = useState("");
 
-  // ========== Error Messages Start here ============
   const [errClientName, setErrClientName] = useState("");
   const [errEmail, setErrEmail] = useState("");
   const [errMessages, setErrMessages] = useState("");
-  // ========== Error Messages End here ==============
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,13 +37,11 @@ const Contact: React.FC = () => {
     setErrMessages("");
   };
 
-  // ================= Email Validation start here =============
   const EmailValidation = (email: string) => {
     return String(email)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
-  // ================= Email Validation End here ===============
 
   const handlePost = (e: React.FormEvent) => {
     e.preventDefault();

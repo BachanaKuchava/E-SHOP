@@ -18,13 +18,9 @@ const ProductDetails = () => {
   const [productInfo, setProductInfo] = useState<Product>();
 console.log(productInfo);
 
-  // useEffect(() => {
-  //   setProductInfo(location.state.item);
-  //   setPrevLocation(location.pathname);
-  // }, [location]);
 
   const params = useParams();
-  // console.log(params);
+
   
   async function getSingleProdut() {
     const resp = await axios.get(`http://localhost:3001/products/${params.id}`)
@@ -57,7 +53,6 @@ console.log(productInfo);
             
           </div>
           <div className="h-full w-full md:col-span-2 xl:col-span-3 xl:p-14 flex flex-col gap-6 justify-center">
-            {/* {productInfo && <productInfo productInfo={productInfo} />} */}
             <ProductInfo productInfo={
               productInfo
               

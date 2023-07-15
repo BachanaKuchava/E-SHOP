@@ -130,7 +130,7 @@ export default function Payment() {
             <div className="mt-8">
               <button
                 type="submit"
-                className="w-full boredr-solid border-[3px] border-blue-500 font-medium py-3 rounded-lg focus:outline-none"
+                className="w-full boredr-solid border-[3px] bg-indigo-900 border-white text-white font-medium py-3 rounded-lg focus:outline-none"
               >
                 {t("Pay.1")}
               </button>

@@ -28,9 +28,7 @@ function CreateProduct(props: Props) {
     }
     return (
         <>
-            {/* <label>ID</label>
-            <input type='text' value={productId} onChange={(e) => setProductId(e.target.value)} />
-            <button onClick={() => handleDeleteProduct()}>Delete</button> */}
+
 
             <div className="mb-6">
                 <label htmlFor="default-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t("Enter ID.1")}</label>

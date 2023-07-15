@@ -18,8 +18,6 @@ export function ChangeProduct() {
   const {
     register,
     handleSubmit,
-    // setError,
-    // formState: { errors },
     reset
   } = useForm<TLoginForm>();
   async function changeProduct(data: TLoginForm) {
