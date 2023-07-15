@@ -31,11 +31,9 @@ function Items({ currentItems }: ItemsProps) {
           <div key={item.id} className="w-full">
             <Product
               id={item.id}
-              // img={item.img}
               title={item.title}
               price={item.price}
               item={item}
-              // des={item.des}
             />
           </div>
         ))}

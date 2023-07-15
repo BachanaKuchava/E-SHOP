@@ -256,7 +256,41 @@
     },
     "Offer" : {
         "1": "Offer"
+    },
+    "Enter Title": {
+        "1" : "Enter Title"
+    },
+    "Enter Description": {
+        "1" : "Enter Description"
+    },
+    "Enter Price": {
+        "1" : "Enter Price"
+    },
+    "Enter Category" : {
+        "1" : "Enter Category"
+    },
+    "Create" : {
+        "1" : "Create"
+    },
+    "Update" : {
+        "1" : "Update"
+    },
+    "Delete" : {
+        "1" : "Delete"
+    },
+    "Create Product" : {
+        "1" : "Create Product"
+    },
+    "Update Product" : {
+        "1" : "Update Product"
+    },
+    "Delete Product" : {
+        "1" : "Delete Product"
+    },
+    "Enter ID" : {
+        "1" : "Enter ID"
     }
+  
 
 
     

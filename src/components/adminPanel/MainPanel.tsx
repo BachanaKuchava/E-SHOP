@@ -4,9 +4,15 @@ import DeleteProduct from './panelComponents/DeleteProduct';
 import { CreateProduct } from './panelComponents/CreateProduct';
 import { ChangeProduct } from './panelComponents/UpdateProduct';
 import { TECollapse } from "tw-elements-react";
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18next';
 interface Props {}
 
 function MainPanel(props: Props) {
+  const { t } = useTranslation();
+  function handleClick2(lang:any) {  
+    i18n.changeLanguage(lang);
+  }
     const [clicked, setClicked] = useState(false);
     const [activeElement, setActiveElement] = useState("");
     const {} = props
@@ -40,7 +46,7 @@ function MainPanel(props: Props) {
               aria-expanded="false"
               aria-controls="collapseOne"
             >
-              Create Product
+              {t("Create Product.1")}
               <span
                 className={`${
                   activeElement === "element1"
@@ -88,7 +94,7 @@ function MainPanel(props: Props) {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Update Product
+            {t("Update Product.1")}
             <span
               className={`${
                 activeElement === "element2"
@@ -135,7 +141,7 @@ function MainPanel(props: Props) {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Delete Product
+            {t("Delete Product.1")}
             <span
               className={`${
                 activeElement === "element3"

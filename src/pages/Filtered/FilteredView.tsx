@@ -3,8 +3,6 @@ import { t } from 'i18next';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Breadcrumbs from '../../components/pageProps/Breadcrumbs';
-import Pagination from '../../components/pageProps/shopPage/Pagination';
-import ProductBanner from '../../components/pageProps/shopPage/ProductBanner';
 import ShopSideNav from '../../components/pageProps/shopPage/ShopSideNav';
 import Product from '../../components/home/Products/Product';
 interface ItemsProps {
@@ -34,11 +32,9 @@ function FilteredView(props: Props) {
               <div key={item.id} className="w-full">
                 <Product
                   id={item.id}
-                  // img={item.img}
                   title={item.title}
                   price={item.price}
                   item={item}
-                  // des={item.des}
                 />
               </div>
             ))}
@@ -56,13 +52,13 @@ const startIndex = (currentPage - 1) * pageSize;
    const endIndex = startIndex + pageSize;
    const currentProducts = productData.slice(startIndex, endIndex);
 
-// const [total, setTotal] = useState(0);
+
 const total = productData.length;
 const pages: any = [];
   for (let i = 1; i <= Math.ceil(total / 4); i++) {
     pages.push(i);
   }
-// setTotal(productData.length)
+
 useEffect(() => {
     try {
       (async function () {
@@ -75,7 +71,7 @@ useEffect(() => {
                   product.price > param.value1 && product.price < param.value2
               )
             );
-            // setTotal(productData.length)
+
             
         } catch (error) {
         }
@@ -105,7 +101,7 @@ useEffect(() => {
           <div
             key={index}
             onClick={() => setCurrentPage(index)}
-            className="w-[50px] h-[50px] bg-gray-600 text-white flex justify-center items-center max-lg:w-[35px] max-lg:h-[35px]"
+            className="w-9 h-9 bg-black text-white flex justify-center items-center max-lg:w-[35px] max-lg:h-[35px]"
           >
             {index}
           </div>

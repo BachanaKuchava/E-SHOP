@@ -1,12 +1,10 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+
 export default function Payment() {
   const { t } = useTranslation();
 
   const [inputValue, setInputValue] = useState('');
-
-
 
   return (
     <div className="min-h-[100vh] flex items-center justify-center py-20">
@@ -20,8 +18,8 @@ export default function Payment() {
               </label>
               <input
                 required
-                type="mail"
-                name="emailr"
+                type="email"
+                name="email"
                 id="emailr"
                 placeholder="company@gmail.com"
                 className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
@@ -34,17 +32,14 @@ export default function Payment() {
                 </label>
                 <input
                   required
-                  
                   name="card-number"
                   id="card-number"
-                  onInput={(e) => {
+                  onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
                     if (e.target.value.length > e.target.maxLength)
-                    e.target.value = e.target.value.slice(0,e.target.maxLength);
-                 }}
-                     type = "number"
-                    //  value={formattedValue}
-                    //  onChange={handleInputChange}
-                     maxlength = {16}
+                      e.target.value = e.target.value.slice(0, e.target.maxLength);
+                  }}
+                  type="number"
+                  maxLength={16}
                   placeholder="0000 0000 0000 0000"
                   className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
                 />

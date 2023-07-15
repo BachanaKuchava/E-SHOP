@@ -40,11 +40,9 @@ const SpecialOffers: FC = () => {
             <div key={item.id} className="w-full">
               <Product
                 id={item.id}
-                // img={item.img}
                 title={item.title}
                 price={item.price}
                 item={item}
-                // des={item.des}
               />
             </div>
           ))}
@@ -64,7 +62,6 @@ const SpecialOffers: FC = () => {
   }
   
   useEffect(() => {
-  // Total()
   getItems()
   
   }, [])
@@ -80,35 +77,6 @@ const SpecialOffers: FC = () => {
       <Heading heading={t("New Arrival.1")} />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 xl:grid-cols-4 gap-10">
       <Items currentItems={products} />
-        {/* <Product
-          id="1101"
-          // img={spfOne}
-          title="sadasdys"
-          price={35.00}
-          item=""
-
-        />
-        <Product
-          id="1102"
-          // img={spfTwo}
-          title="Tea Table"
-          price={180.00}
-          item=""
-        />
-        <Product
-          id="1103"
-          // img={spfThree}
-          title="Headphones"
-          price={25.00}
-          item=""
-        />
-        <Product
-          id="1104"
-          // img={spfFour}
-          title="Sun glasses"
-          price={220.00}
-          item=""
-        /> */}
       </div>
     </div>
   );

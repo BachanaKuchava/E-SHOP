@@ -58,11 +58,12 @@ console.log(productInfo);
           </div>
           <div className="h-full w-full md:col-span-2 xl:col-span-3 xl:p-14 flex flex-col gap-6 justify-center">
             {/* {productInfo && <productInfo productInfo={productInfo} />} */}
-            <ProductInfo productInfo={{
-              title: productInfo?.title,
-              price: productInfo?.price,
-              des: productInfo?.description
-            }} />
+            <ProductInfo productInfo={
+              productInfo
+              
+              
+
+            } />
           </div>
         </div>
       </div>
