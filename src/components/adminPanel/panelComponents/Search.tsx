@@ -40,7 +40,7 @@ function Search(props: Props) {
         
         <div className="relative w-full lg:w-[600px] h-[50px] text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl my-[100px]">
         <input type='search' value={searchValue} onChange={(e) => setSearchValue(e.target.value) }
-        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos, Design Templates...'/>
+        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5     " placeholder="Search Mockups, Logos, Design Templates...'/>
             <FaSearch className="w-5 h-5" />
             {searchValue && (
               <div

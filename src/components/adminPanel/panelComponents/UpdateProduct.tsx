@@ -38,7 +38,7 @@ export function ChangeProduct() {
     i18n.changeLanguage(lang);
   }
   return (
-    <div className="w-full bg-neutral-800 rounded-xl p-5 flex flex-col gap-5 justify-between">
+    <div className="w-full bg-neutral-800 rounded-xl p-5 flex flex-col gap-5 justify-between text-white">
       <div className="flex gap-5 max-sm:flex-col">
         <div className="flex gap-3">
           <label htmlFor="title">{t("Enter Title.1")}</label>
@@ -72,10 +72,10 @@ export function ChangeProduct() {
         onSubmit={handleSubmit(changeProduct)}
       >
         <div className="flex flex-col gap-4 max-xl:w-full">
-          <div className="dark:text-white">
-            <p>Id</p>
+          <div className="">
+            <p className="text-white">Id</p>
             <input
-              className="w-[800px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-[800px] bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5  "
               value={id}
               onChange={(e) => setId(e.target.value)}
               type="text"
@@ -84,10 +84,10 @@ export function ChangeProduct() {
             />
           </div>
           {displaytitle && (
-            <div className="dark:text-white">
+            <div className="">
               <p>{t("Enter Title.1")}</p>
               <input
-                className="w-[800px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="w-[800px] bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5  "
                 {...register("title", { required: true })}
                 type="text"
                 name="title"
@@ -96,10 +96,10 @@ export function ChangeProduct() {
             </div>
           )}
           {displaydesc && (
-            <div className="w-[800px] dark:text-white">
-              <p>{t("Enter Description.1")}</p>
+            <div className="w-[800px] ">
+              <p className="text-white">{t("Enter Description.1")}</p>
               <input
-                className="w-[800px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="w-[800px] bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 {...register("description", { required: true })}
                 type="text"
                 name="description"
@@ -108,10 +108,10 @@ export function ChangeProduct() {
             </div >
           )}
           {displayprice && (
-            <div className="dark:text-white">
-              <p>{t("Enter Price.1")}</p>
+            <div className="">
+              <p className="text-white">{t("Enter Price.1")}</p>
               <input
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
                 type="number"
                 {...register("price", { valueAsNumber: true, required: true })}
                 name="price"
@@ -122,7 +122,7 @@ export function ChangeProduct() {
         </div>
         <button
           type="submit"
-          className="mx-[100px] px-6 py-3.5 text-base font-medium text-white inline-flex items-center bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-lg"
+          className="mx-[100px] px-6 py-3.5 text-base font-medium text-white inline-flex items-center bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300     rounded-lg"
         >
           {t("Update.1")}
         </button>
