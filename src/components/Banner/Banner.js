@@ -101,6 +101,9 @@ const Banner = () => {
   };
   return (
     <div className="w-full bg-white">
+      
+
+      
       <Slider {...settings}>
         <Link to="/offer">
           <div>
@@ -118,6 +121,7 @@ const Banner = () => {
           </div>
         </Link>
       </Slider>
+      
     </div>
   );
 };
