@@ -72,6 +72,7 @@ const HeaderBottom = () => {
   }
 
   const [searchValue, setSearchValue] = useState('')
+
     const [products, setProducts] = useState([])
     
 
@@ -108,6 +109,7 @@ const HeaderBottom = () => {
     }
 
     function navigateToSingleProtuct(id) {
+      setSearchValue('');
       navigate(`/product/${id}`)
     
     }
