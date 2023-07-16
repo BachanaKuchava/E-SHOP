@@ -14,28 +14,11 @@ import { AuthContext } from "../../auth/context/AuthContext";
 const Cart = () => {
   const dispatch = useDispatch();
   const { status } = useContext(AuthContext);
-  const products = useSelector((state) => state.orebiReducer.products);
+  const products = useSelector((state: any) => state.orebiReducer.products);
   const [totalAmt, setTotalAmt] = useState("");
-  const [shippingCharge, setShippingCharge] = useState("");
-  useEffect(() => {
-    let price = 0;
-    products.map((item) => {
-      price += item.price * item.quantity;
-      return price;
-    });
-    setTotalAmt(price);
-  }, [products]);
-  useEffect(() => {
-    if (totalAmt <= 200) {
-      setShippingCharge(30);
-    } else if (totalAmt <= 400) {
-      setShippingCharge(25);
-    } else if (totalAmt > 401) {
-      setShippingCharge(20);
-    }
-  }, [totalAmt]);
+  const shippingCharge = 30;
   const { t } = useTranslation();
-  function handleClick(lang) {  
+  function handleClick(lang: string) {  
     i18n.changeLanguage(lang);
   }
 
@@ -53,7 +36,7 @@ const Cart = () => {
 
   return (
     <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs title="Cart" />
+      <Breadcrumbs title="Cart" prevLocation={undefined} />
       { !isEmpty ? (
         <div className="pb-20">
           <div className="w-full h-20 bg-[#F5F7F7] text-primeColor hidden lgl:grid grid-cols-5 place-content-center px-6 text-lg font-titleFont font-semibold">
@@ -63,7 +46,7 @@ const Cart = () => {
             <h2>{t("Sub Total.1")}</h2>
           </div>
           <div className="mt-5">
-            {items.map((item) => (
+            {items.map((item: any) => (
               <div key={item._id}>
                 <ItemCard item={item} />
               </div>

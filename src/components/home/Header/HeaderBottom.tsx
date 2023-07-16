@@ -25,7 +25,7 @@ const HeaderBottom = () => {
   const [currentLanguage, setCurrentLanguage] = useState('')
   const [clicked, setClicked] = useState(false);
   const navigate = useNavigate();
-  const ref = useRef();
+  const ref:any = useRef();
 
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
@@ -44,13 +44,13 @@ const HeaderBottom = () => {
 
 
 
-  const handleSearch = (e) => {
+  const handleSearch = (e:any) => {
     setSearchQuery(e.target.value);
     
   };
 
   useEffect(() => {
-    const filtered = paginationItems.filter((item) =>
+    const filtered:any = paginationItems.filter((item) =>
       item.productName.toLowerCase().includes(searchQuery.toLowerCase())
     );
     
@@ -67,7 +67,7 @@ const HeaderBottom = () => {
   }, [clicked])
 
   const { t } = useTranslation();
-  function handleLanguage(lang) {  
+  function handleLanguage(lang:any) {  
     i18n.changeLanguage(lang);
   }
 
@@ -108,7 +108,7 @@ const HeaderBottom = () => {
      
     }
 
-    function navigateToSingleProtuct(id) {
+    function navigateToSingleProtuct(id:any) {
       setSearchValue('');
       navigate(`/product/${id}`)
     
@@ -165,7 +165,7 @@ const HeaderBottom = () => {
                 className={`w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
               >
                 {searchValue &&  
-                  products.map((item) => (
+                  products.map((item:any) => (
                     
                  
                     <div key={item.id}
